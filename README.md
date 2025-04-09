@@ -9,6 +9,19 @@ Foi criado dois get para cada método.
 No class calculafrete foi criado um método calcular, que calcula o valor do frete e return.
 No método Gravadordearquivo o código em si não foi alterado.
 
+
+Open-Closed Principle
+
+O conceito OSOLID é uma class deve estar aberta para extensão, mas fechada para modificação.
+Na atividade no metado havia várias formas de pagamento juntas: PIX,  CARTÂO, BOLETO, todas 
+ela é uma forma de pagamento mas cada uma é diferente.
+Na class SistemaPagamento tinha todas forma de pagamento com if e else, assim deixa o código 
+muito extenso, e toda vez que for colocar uma forma de pagamento novo vai ter que modificar o código, ferindo o conceito OSOLID.
+Separei todas as formas de pagamento em class: Pix, Cartão, Boleto.
+criei uma class mae Formadepagamento para poder fazer o polimorfismos. no método SistemaPagamento criei um metado de pagar.
+Na Main chamei a estacionei o objeto para chamar os metodos de pagamento, em seguida chamei os métodos colocando valor para simular um pagamento.
+
+
 Liskov Substitution Principle
 
   O conceito da substituição Liskov diz que ao implementar uma herança, o objeto filho
